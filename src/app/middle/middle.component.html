@@ -1,0 +1,16 @@
+<h3 class=title>DATA BINDING</h3>
+<h5 >Two way binding [(ngModel)]=data </h5>
+<div>
+   <input type="text" class="form-control" [(ngModel)]="bookName"> 
+</div>
+<div>
+    <h5 >string interpolation </h5>
+    <p>BookId :{{bookId}}</p>
+    <p>Bookname:{{bookName}}</p>
+    <p>Author:{{author}}</p>
+    <p>Bookstatus:{{bookStatus}}</p>
+</div>
+<h5 >string property "[property]=data" and event binding "(event)=data"</h5>
+<div>
+    <button class="btn btn-success" [disabled]="btnToggle"(click)="onToggle()">Toggle</button>
+</div>
