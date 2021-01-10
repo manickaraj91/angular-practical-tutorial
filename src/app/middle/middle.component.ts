@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MathsService } from '../services/maths.service';
 
 
 @Component({
@@ -13,8 +14,7 @@ export class MiddleComponent implements OnInit {
   author: string = "Balakumaran";
   bookStatus: string = "Available";
   btnToggle: boolean = true;
-  constructor() { }
-
+  constructor(public _maths:MathsService) { }
   ngOnInit(): void {
     setTimeout(() => {
       this.btnToggle = false;
@@ -28,6 +28,9 @@ export class MiddleComponent implements OnInit {
       else{this.bookStatus = "Available";}
     }
   
-  
+    decrease(){
+      this._maths.decreaseone();
+    }
+
 }
 

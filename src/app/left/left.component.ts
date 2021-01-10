@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MathsService } from '../services/maths.service';
 
 @Component({
   selector: 'app-left',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LeftComponent implements OnInit {
 
-  constructor() { }
+  constructor(public _maths:MathsService) { }
 
   ngOnInit(): void {
   }
-
+  increase(){
+    this._maths.addone();
+  }
 }
+
