@@ -5,3 +5,10 @@
     </h6>
 </div>
 <button class="btn btn-success" (click)="increase()">increase</button>
+<div>
+   <tr *ngFor="let subject of subjectChild">
+        <td>{{subject.id}}</td><br>
+        <td>{{subject.name}}</td>
+    </tr>
+</div>
+<button class="btn btn-success" (click)="generateNumber()">generateNumbe</button>

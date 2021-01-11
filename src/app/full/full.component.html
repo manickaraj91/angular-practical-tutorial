@@ -1,7 +1,12 @@
 <div class="container">
     <div class="row">
+     
       <div class="col-sm-3 columnPan">
-        <app-left></app-left>    
+        <app-left [subjectChild]="subjectParent"
+        (numberGenerated)="onNumberGenerated($event)"></app-left>  
+        <p>
+          random number from child component {{randomNumber||'not yet generated'}}
+        </p>  
       </div>
       <div class="col-sm-6 columnPan">
         <app-middle></app-middle>    
@@ -9,5 +14,7 @@
       <div class="col-sm-3 columnPan">
         <app-right></app-right>    
       </div>
+      
     </div>
+   
   </div>
